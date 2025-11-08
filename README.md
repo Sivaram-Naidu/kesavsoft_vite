@@ -45,7 +45,7 @@ npm (comes with Node.js)
 
 Clone the repository and install the dependencies.
 
-git clone https://github.com/Sivaram-Naidu/kesavsoft_vite.git
+git clone [https://github.com/Sivaram-Naidu/kesavsoft_vite.git](https://github.com/Sivaram-Naidu/kesavsoft_vite.git)
 cd kesavsoft_vite
 npm install
 
