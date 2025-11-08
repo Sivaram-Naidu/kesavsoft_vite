@@ -1,98 +1,120 @@
 <!-- FILENAME: contact.html -->
-{% extends "src/templates/_layout.njk" %} {# Define the active page for the
-navbar #} {% set activePage = "contact" %} {# Define the main content block for
-this page #} {% block content %}
-<!-- Page Header -->
-<header class="page-header bg-theme-primary text-white text-center py-5">
-  <div class="container">
-    <h1 class="display-4 fw-bold">Get In Touch</h1>
-    <p class="lead">
-      We'd love to hear from you. Let's build something great together.
-    </p>
-  </div>
-</header>
+{% extends "src/templates/_layout.njk" %} {% set pageTitle = "Contact" %} {%
+block content %}
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <!-- Page Header -->
+      <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold text-indigo">Get in Touch</h1>
+        <p class="lead text-muted">
+          We'd love to hear from you. Please fill out the form below.
+        </p>
+      </div>
 
-<!-- Main Content -->
-<main class="flex-grow-1">
-  <!-- Contact Form & Details Section -->
-  <section class="py-5 section-padding">
-    <div class="container">
-      <div class="row g-5">
-        <!-- Contact Form -->
-        <div class="col-lg-7">
-          <div class="card p-4 p-md-5 border-0 shadow-lg">
-            <h2 class="fw-bold mb-4">Send Us a Message</h2>
-            <form action="#" method="POST">
-              <!-- Name -->
-              <div class="mb-3">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" required />
+      <div class="row">
+        <!-- Contact Info Column -->
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <div class="card h-100 border-0 shadow-sm">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="fw-bold text-indigo mb-4">Contact Details</h3>
+
+              <div class="d-flex mb-3">
+                <i class="bi bi-geo-alt-fill fs-4 text-indigo me-3"></i>
+                <div>
+                  <h5 class="fw-semibold mb-0">Address</h5>
+                  <p class="text-muted mb-0">
+                    123 Tech Avenue, Suite 100<br />Innovate City, 54321
+                  </p>
+                </div>
               </div>
-              <!-- Email -->
-              <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" required />
+
+              <hr />
+
+              <div class="d-flex mb-3">
+                <i class="bi bi-telephone-fill fs-4 text-indigo me-3"></i>
+                <div>
+                  <h5 class="fw-semibold mb-0">Phone</h5>
+                  <p class="text-muted mb-0">(123) 456-7890</p>
+                </div>
               </div>
-              <!-- Subject -->
-              <div class="mb-3">
-                <label for="subject" class="form-label">Subject</label>
-                <input type="text" class="form-control" id="subject" required />
+
+              <hr />
+
+              <div class="d-flex">
+                <i class="bi bi-envelope-fill fs-4 text-indigo me-3"></i>
+                <div>
+                  <h5 class="fw-semibold mb-0">Email</h5>
+                  <p class="text-muted mb-0">info@keshavsoft.com</p>
+                </div>
               </div>
-              <!-- Message -->
-              <div class="mb-4">
-                <label for="message" class="form-label">Message</label>
-                <textarea
-                  class="form-control"
-                  id="message"
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-              <!-- Submit Button -->
-              <button type="submit" class="btn btn-theme-primary w-100 btn-lg">
-                Send Message
-              </button>
-            </form>
+            </div>
           </div>
         </div>
 
-        <!-- Contact Details & Map -->
-        <div class="col-lg-5">
-          <div class="p-4">
-            <h3 class="fw-bold mb-4">Contact Information</h3>
+        <!-- Contact Form Column -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="fw-bold text-indigo mb-4">Send Us a Message</h3>
 
-            <!-- Map Placeholder -->
-            <div class="mb-4">
-              <a href="https://maps.google.com" target="_blank">
-                <img
-                  src="https://placehold.co/600x400/6c757d/ffffff?text=Map+Placeholder"
-                  alt="Map"
-                  class="img-fluid rounded shadow"
-                />
-              </a>
+              <!-- 
+                NETLIFY FORM CHANGES:
+                1. Added data-netlify="true" to the <form> tag
+                2. Added name="contact" to the <form> tag
+                3. Added a hidden input for Netlify
+                4. Added "name" attributes to all inputs (name, email, message)
+              -->
+              <form
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                class="row g-3"
+              >
+                <!-- This hidden field is required for Netlify to identify the form -->
+                <input type="hidden" name="form-name" value="contact" />
+
+                <div class="col-12">
+                  <label for="inputName" class="form-label">Your Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputName"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="inputEmail" class="form-label">Your Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="inputEmail"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="col-12">
+                  <label for="inputMessage" class="form-label">Message</label>
+                  <textarea
+                    class="form-control"
+                    id="inputMessage"
+                    name="message"
+                    rows="5"
+                    required
+                  ></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-indigo btn-lg w-100">
+                    Send Message
+                  </button>
+                </div>
+              </form>
             </div>
-
-            <!-- Contact Details -->
-            <h5 class="fw-bold">KeshavSoft HQ</h5>
-            <ul class="list-unstyled">
-              <li class="mb-2">
-                <i class="bi bi-geo-alt-fill text-theme-primary me-2"></i>
-                123 Tech Avenue, Suite 100<br />
-                Silicon Valley, CA 94000
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-telephone-fill text-theme-primary me-2"></i>
-                (123) 456-7890
-              </li>
-              <li class="mb-2">
-                <i class="bi bi-envelope-fill text-theme-primary me-2"></i>
-                contact@keshavsoft.com
-              </li>
-            </ul>
           </div>
         </div>
       </div>
     </div>
-  </section>
-</main>
+  </div>
+</div>
 {% endblock %}
