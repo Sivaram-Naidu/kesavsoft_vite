@@ -16,7 +16,6 @@ block content %}
         <!-- Contact Info Column -->
         <div class="col-lg-5 mb-4 mb-lg-0">
           <div class="card h-100 border-0 shadow-sm">
-            <!-- ... (card content remains the same) ... -->
             <div class="card-body p-4 p-md-5">
               <h3 class="fw-bold text-indigo mb-4">Contact Details</h3>
 
@@ -60,21 +59,15 @@ block content %}
               <h3 class="fw-bold text-indigo mb-4">Send Us a Message</h3>
 
               <!-- 
-                NETLIFY FORM CHANGES:
-                1. Added action="/thank-you/"
+                FIX: Removed the bad comment from inside the <form> tag
               -->
               <form
                 name="contact"
                 method="POST"
                 data-netlify="true"
                 action="/thank-you/"
-                <!--
-                ADD
-                THIS
-                LINE
-                --
+                class="row g-3"
               >
-                class="row g-3" >
                 <!-- This hidden field is required for Netlify to identify the form -->
                 <input type="hidden" name="form-name" value="contact" />
 
