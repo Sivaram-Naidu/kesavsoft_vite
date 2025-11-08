@@ -1,63 +1,48 @@
-Internship Task 2: KeshavSoft Website (Vite + Nunjucks)
+KeshavSoft - Internship Task 2
 
-This project is a recreation of the Task 1 (KeshavSoft 3-page website) deliverables, built using a modern Vite and Nunjucks stack as required by the task.
+This project is a rebuild of the original Task 1 static website, now implemented with a professional Vite + Nunjucks stack. It features a 3-page static site with reusable templates and a build process.
 
-Technology Stack
+Live Demo: https://keshavsoftware.netlify.app/
+
+Tech Stack
 
 Bundler: Vite
 
-Why: Chosen for its extremely fast development server (using native ESM) and simple configuration for CSS/JS bundling. It provides an excellent developer experience.
+Templating: Nunjucks
 
-Templating Engine: Nunjucks
+Styling: Bootstrap 5 & Bootstrap Icons
 
-Why: Chosen for its powerful and easy-to-use templating features, such as layout inheritance ({% extends %}), partials ({% include %}), and variables ({{ pageTitle }}). This makes managing a multi-page site much cleaner and avoids duplicating code (like navbars and footers).
+Form Handling: Formsubmit.co
 
-Project Structure
+How to Run This Project Locally
 
-/
-├── dist/ <-- Compiled output (for deployment)
-├── src/
-│ ├── templates/
-│ │ ├── partials/
-│ │ │ ├── \_footer.njk <-- Footer partial
-│ │ │ └── \_navbar.njk <-- Navbar partial
-│ │ └── \_layout.njk <-- Main site layout
-│ ├── main.js <-- Main entry (imports CSS)
-│ └── style.css <-- Custom styles
-├── .gitignore
-├── about.html <-- Nunjucks template for About page
-├── contact.html <-- Nunjucks template for Contact page
-├── index.html <-- Nunjucks template for Home page
-├── package.json <-- Project dependencies & scripts
-├── package-lock.json
-└── vite.config.js <-- Vite & Nunjucks configuration
+Clone the repository:
 
-How to Install and Run
+git clone [https://github.com/Sivaram-Naidu/kesavsoft_vite.git](https://github.com/Sivaram-Naidu/kesavsoft_vite.git)
 
-Prerequisites
 
-Node.js (LTS version)
+Navigate to the project directory:
 
-npm (comes with Node.js)
+cd kesavsoft_vite
 
-1. Installation
 
-Clone the repository and install the dependencies.
+Install dependencies:
 
-git clone <https://github.com/Sivaram-Naidu/kesavsoft_vite>
-cd <kesavsoft_vite>
 npm install
 
-2. Running the Development Server
 
-This command starts the Vite dev server. It will watch all your files for changes and instantly update the browser.
+Run the development server:
 
 npm run dev
 
-The server will be running at http://localhost:5173/.
 
-3. Building for Production
+The site will be available at http://localhost:5173/.
 
-This command bundles and optimizes all assets into the dist/ folder, ready for deployment.
+Build for Production
+
+To create an optimized production build (which Netlify does automatically):
 
 npm run build
+
+
+This will compile all files into the /dist folder.
