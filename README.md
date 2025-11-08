@@ -28,6 +28,7 @@ Project Structure
 ├── about.html <-- Nunjucks template for About page
 ├── contact.html <-- Nunjucks template for Contact page
 ├── index.html <-- Nunjucks template for Home page
+├── thank-you.html <-- Form success page
 ├── package.json <-- Project dependencies & scripts
 ├── package-lock.json
 └── vite.config.js <-- Vite & Nunjucks configuration
@@ -44,8 +45,8 @@ npm (comes with Node.js)
 
 Clone the repository and install the dependencies.
 
-git clone <https://github.com/Sivaram-Naidu/kesavsoft_vite>
-cd <kesavsoft_vite>
+git clone https://github.com/Sivaram-Naidu/kesavsoft_vite.git
+cd kesavsoft_vite
 npm install
 
 2. Running the Development Server
