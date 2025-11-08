@@ -1,0 +1,98 @@
+<!-- FILENAME: contact.html -->
+{% extends "src/templates/_layout.njk" %} {# Define the active page for the
+navbar #} {% set activePage = "contact" %} {# Define the main content block for
+this page #} {% block content %}
+<!-- Page Header -->
+<header class="page-header bg-theme-primary text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-4 fw-bold">Get In Touch</h1>
+    <p class="lead">
+      We'd love to hear from you. Let's build something great together.
+    </p>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-grow-1">
+  <!-- Contact Form & Details Section -->
+  <section class="py-5 section-padding">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Contact Form -->
+        <div class="col-lg-7">
+          <div class="card p-4 p-md-5 border-0 shadow-lg">
+            <h2 class="fw-bold mb-4">Send Us a Message</h2>
+            <form action="#" method="POST">
+              <!-- Name -->
+              <div class="mb-3">
+                <label for="name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" required />
+              </div>
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <!-- Subject -->
+              <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" required />
+              </div>
+              <!-- Message -->
+              <div class="mb-4">
+                <label for="message" class="form-label">Message</label>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-theme-primary w-100 btn-lg">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Contact Details & Map -->
+        <div class="col-lg-5">
+          <div class="p-4">
+            <h3 class="fw-bold mb-4">Contact Information</h3>
+
+            <!-- Map Placeholder -->
+            <div class="mb-4">
+              <a href="https://maps.google.com" target="_blank">
+                <img
+                  src="https://placehold.co/600x400/6c757d/ffffff?text=Map+Placeholder"
+                  alt="Map"
+                  class="img-fluid rounded shadow"
+                />
+              </a>
+            </div>
+
+            <!-- Contact Details -->
+            <h5 class="fw-bold">KeshavSoft HQ</h5>
+            <ul class="list-unstyled">
+              <li class="mb-2">
+                <i class="bi bi-geo-alt-fill text-theme-primary me-2"></i>
+                123 Tech Avenue, Suite 100<br />
+                Silicon Valley, CA 94000
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-telephone-fill text-theme-primary me-2"></i>
+                (123) 456-7890
+              </li>
+              <li class="mb-2">
+                <i class="bi bi-envelope-fill text-theme-primary me-2"></i>
+                contact@keshavsoft.com
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

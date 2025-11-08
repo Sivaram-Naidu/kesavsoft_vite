@@ -1,0 +1,207 @@
+<!-- FILENAME: index.html -->
+{% extends "src/templates/_layout.njk" %} {# Define the active page for the
+navbar #} {% set activePage = "home" %} {# Define the main content block for
+this page #} {% block content %}
+<!-- Hero Section (Carousel) -->
+<header>
+  <div
+    id="heroCarousel"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <!-- Slide 1 -->
+      <div
+        class="carousel-item active hero-slide"
+        style="
+          background-image: url('https://placehold.co/1920x800/343a40/343a40');
+        "
+      >
+        <div class="container h-100">
+          <div
+            class="d-flex flex-column justify-content-center align-items-center text-center h-100 text-white hero-caption"
+          >
+            <h1 class="display-3 fw-bold">Innovative Tech Solutions</h1>
+            <p class="lead">
+              Driving business forward with cutting-edge technology and creative
+              strategies.
+            </p>
+            <a
+              href="about.html"
+              class="btn btn-theme-primary btn-lg mt-4"
+              style="max-width: 200px"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div
+        class="carousel-item hero-slide"
+        style="
+          background-image: url('https://placehold.co/1920x800/495057/495057');
+        "
+      >
+        <div class="container h-100">
+          <div
+            class="d-flex flex-column justify-content-center align-items-center text-center h-100 text-white hero-caption"
+          >
+            <h1 class="display-3 fw-bold">Data-Driven Insights</h1>
+            <p class="lead">
+              Unlock the power of your data with our advanced analytics
+              services.
+            </p>
+            <a
+              href="about.html#services"
+              class="btn btn-light btn-lg mt-4"
+              style="max-width: 200px"
+              >Our Services</a
+            >
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div
+        class="carousel-item hero-slide"
+        style="
+          background-image: url('https://placehold.co/1920x800/6c757d/6c757d');
+        "
+      >
+        <div class="container h-100">
+          <div
+            class="d-flex flex-column justify-content-center align-items-center text-center h-100 text-white hero-caption"
+          >
+            <h1 class="display-3 fw-bold">Client-Centric Approach</h1>
+            <p class="lead">
+              We partner with you to achieve your goals, every step of the way.
+            </p>
+            <a
+              href="contact.html"
+              class="btn btn-theme-primary btn-lg mt-4"
+              style="max-width: 200px"
+              >Contact Us</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#heroCarousel"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#heroCarousel"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-grow-1">
+  <!-- Features/Services Section (Cards) -->
+  <section class="py-5 section-padding">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Our Core Services</h2>
+        <p class="lead text-muted">
+          We offer a wide range of solutions to meet your business needs.
+        </p>
+      </div>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow-sm custom-card border-0">
+            <div class="card-body text-center p-4">
+              <i
+                class="bi bi-bar-chart-line-fill display-3 text-theme-primary mb-3"
+              ></i>
+              <h5 class="card-title fw-bold">Data Analytics</h5>
+              <p class="card-text">
+                Leverage big data to make smarter, faster decisions. We turn raw
+                data into actionable insights.
+              </p>
+              <a
+                href="about.html#services"
+                class="btn btn-outline-theme-primary mt-3"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow-sm custom-card border-0">
+            <div class="card-body text-center p-4">
+              <i
+                class="bi bi-cloud-arrow-up-fill display-3 text-theme-primary mb-3"
+              ></i>
+              <h5 class="card-title fw-bold">Cloud Solutions</h5>
+              <p class="card-text">
+                Scalable, secure, and reliable cloud infrastructure to power
+                your applications and services.
+              </p>
+              <a
+                href="about.html#services"
+                class="btn btn-outline-theme-primary mt-3"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow-sm custom-card border-0">
+            <div class="card-body text-center p-4">
+              <i
+                class="bi bi-shield-lock-fill display-3 text-theme-primary mb-3"
+              ></i>
+              <h5 class="card-title fw-bold">Cyber Security</h5>
+              <p class="card-text">
+                Protect your digital assets with our comprehensive security
+                audits and threat mitigation.
+              </p>
+              <a
+                href="about.html#services"
+                class="btn btn-outline-theme-primary mt-3"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}

@@ -1,0 +1,82 @@
+/* FILENAME: src/style.css */
+:root {
+    --theme-primary: #4F46E5; /* Indigo */
+    --theme-primary-dark: #4338CA;
+    --theme-primary-light: #EDEBFF;
+}
+
+/* New Theme Colors */
+.text-theme-primary {
+    color: var(--theme-primary);
+}
+
+.bg-theme-primary {
+    background-color: var(--theme-primary);
+}
+
+.btn-theme-primary {
+    background-color: var(--theme-primary);
+    border-color: var(--theme-primary);
+    color: #ffffff;
+}
+.btn-theme-primary:hover {
+    background-color: var(--theme-primary-dark);
+    border-color: var(--theme-primary-dark);
+    color: #ffffff;
+}
+.btn-outline-theme-primary {
+    color: var(--theme-primary);
+    border-color: var(--theme-primary);
+}
+.btn-outline-theme-primary:hover {
+    background-color: var(--theme-primary);
+    color: #ffffff;
+}
+
+/* Accordion Override */
+.accordion-button:not(.collapsed) {
+    background-color: var(--theme-primary-light);
+    color: var(--theme-primary);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+.accordion-button:focus {
+    box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.25);
+}
+
+
+/* Make the carousel full-height */
+.hero-slide {
+    height: 60vh;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Add a dark overlay to the carousel caption for better text readability */
+.hero-caption {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 2rem;
+    border-radius: 0.5rem;
+}
+
+/* Custom card hover effect */
+.custom-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.custom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1) !important;
+}
+
+/* General page header style */
+.page-header {
+    background-size: cover;
+    background-position: center;
+    border-bottom: 5px solid var(--theme-primary-dark);
+}
+
+/* General padding for sections */
+.section-padding {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}

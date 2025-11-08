@@ -1,0 +1,138 @@
+<!-- FILENAME: about.html -->
+{% extends "src/templates/_layout.njk" %} {# Define the active page for the
+navbar #} {% set activePage = "about" %} {# Define the main content block for
+this page #} {% block content %}
+<!-- Page Header -->
+<header class="page-header bg-theme-primary text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-4 fw-bold">About Our Company</h1>
+    <p class="lead">Pioneering solutions, empowering businesses.</p>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-grow-1">
+  <!-- About Section -->
+  <section class="py-5 section-padding">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <img
+            src="https://placehold.co/600x400/4F46E5/ffffff?text=Our+Team"
+            alt="Our Team"
+            class="img-fluid rounded shadow-lg mb-4 mb-lg-0"
+          />
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-3">Who We Are</h2>
+          <p class="lead text-muted">
+            KeshavSoft is a dynamic team of innovators, strategists, and
+            problem-solvers dedicated to delivering transformative digital
+            experiences. We believe in the power of technology to reshape
+            industries and create lasting value.
+          </p>
+          <p>
+            Our mission is to build solutions that are not only powerful but
+            also intuitive, scalable, and secure. We partner closely with our
+            clients, embedding ourselves in their challenges and opportunities
+            to deliver outcomes that truly matter.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section (Accordion) -->
+  <section id="services" class="py-5 section-padding bg-white">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Our Services</h2>
+        <p class="lead text-muted">
+          A comprehensive suite of services to fuel your growth.
+        </p>
+      </div>
+      <div class="accordion" id="servicesAccordion">
+        <!-- Service 1 -->
+        <div class="accordion-item border-0 shadow-sm mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button fw-bold"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              Custom Software Development
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#servicesAccordion"
+          >
+            <div class="accordion-body">
+              We build tailor-made software solutions from the ground up,
+              designed to meet your unique business challenges. From enterprise
+              applications to mobile apps, our code is clean, efficient, and
+              built to scale.
+            </div>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="accordion-item border-0 shadow-sm mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button fw-bold collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Cloud & DevOps
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#servicesAccordion"
+          >
+            <div class="accordion-body">
+              Harness the power of the cloud. We provide expert-level services
+              in cloud migration, infrastructure management, and CI/CD pipelines
+              to accelerate your development lifecycle and enhance reliability.
+            </div>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="accordion-item border-0 shadow-sm mb-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button fw-bold collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Data Analytics & AI
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#servicesAccordion"
+          >
+            <div class="accordion-body">
+              Turn data into your most valuable asset. Our data scientists and
+              AI specialists help you unlock actionable insights, build
+              predictive models, and automate processes using machine learning.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+{% endblock %}
