@@ -1,13 +1,13 @@
 <!-- FILENAME: thank-you.html -->
-{% extends "src/templates/_layout.njk" %} {% set pageTitle = "Success" %} {%
-block content %}
+{% extends "src/templates/_layout.njk" %} {% set pageTitle = "Success" %} {% set
+activePage = "" %}
+<!-- No active page -->
+
+{% block content %}
 <div class="container my-5 py-5">
   <div class="row justify-content-center">
     <div class="col-lg-8 text-center">
-      <!-- Fallback text icon -->
-      <div class="display-1 text-success fw-bold" style="font-size: 6rem">
-        ✓
-      </div>
+      <i class="bi bi-check-circle-fill display-1 text-success"></i>
 
       <h1 class="display-4 fw-bold text-theme-primary mt-4">Message Sent!</h1>
       <p class="lead text-muted">
@@ -15,7 +15,10 @@ block content %}
         will get back to you shortly.
       </p>
 
-      <a href="/" class="btn btn-theme-primary btn-lg mt-4"> Return to Home </a>
+      <a href="/" class="btn btn-theme-primary btn-lg mt-4">
+        <i class="bi bi-house-fill me-2"></i>
+        Return to Home
+      </a>
     </div>
   </div>
 </div>

@@ -35,7 +35,7 @@ export default defineConfig({
         main: resolve(__dirname, "index.html"),
         about: resolve(__dirname, "about.html"),
         contact: resolve(__dirname, "contact.html"),
-        thankyou: resolve(__dirname, "thank-you.html"), // THIS IS THE FIX
+        thankyou: resolve(__dirname, "thank-you.html"),
       },
     },
   },
