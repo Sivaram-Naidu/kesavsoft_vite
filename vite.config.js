@@ -1,50 +1,27 @@
 // FILENAME: vite.config.js
-import { defineConfig } from 'vite';
-import nunjucks from 'vite-plugin-nunjucks';
-import { resolve } from 'path';
+import { resolve } from "path";
+import nunjucks from "vite-plugin-nunjucks";
 
-export default defineConfig({
+export default {
   plugins: [
     nunjucks({
-      // Define the directories to search for Nunjucks templates
-      templates: [
-        'src/templates',
-        'index.html',
-        'about.html',
-        'contact.html'
-      ],
-      // Define global variables accessible in all Nunjucks templates
+      templates: [resolve(__dirname, "src/templates")],
       variables: {
-        'index.html': {
-          pageTitle: 'Home',
-          pageUrl: 'index.html'
-        },
-        'about.html': {
-          pageTitle: 'About & Services',
-          pageUrl: 'about.html'
-        },
-        'contact.html': {
-          pageTitle: 'Contact',
-          pageUrl: 'contact.html'
-        }
+        "index.html": { pageTitle: "Home" },
+        "about.html": { pageTitle: "About" },
+        "contact.html": { pageTitle: "Contact" },
+        "thank-you.html": { pageTitle: "Success" },
       },
     }),
   ],
-  // Define the project's root directory
-  root: '.',
-  // Configure the build process for a Multi-Page App (MPA)
   build: {
-    outDir: 'dist',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        about: resolve(__dirname, 'about.html'),
-        contact: resolve(__dirname, 'contact.html'),
+        main: resolve(__dirname, "index.html"),
+        about: resolve(__dirname, "about.html"),
+        contact: resolve(__dirname, "contact.html"),
+        thankyou: resolve(__dirname, "thank-you.html"),
       },
     },
   },
-  // Configure the development server
-  server: {
-    open: '/', // Automatically open the browser
-  },
-});
+};

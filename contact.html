@@ -1,12 +1,12 @@
 <!-- FILENAME: contact.html -->
-{% extends "src/templates/_layout.njk" %} {% set pageTitle = "Contact" %} {%
-block content %}
-<div class="container my-5">
+{% extends "src/templates/_layout.njk" %} {% set pageTitle = "Contact" %} {% set
+activePage = "contact" %} {% block content %}
+<div class="container my-5 py-5">
   <div class="row justify-content-center">
     <div class="col-lg-10">
       <!-- Page Header -->
       <div class="text-center mb-5">
-        <h1 class="display-4 fw-bold text-indigo">Get in Touch</h1>
+        <h1 class="display-4 fw-bold text-theme-primary">Get in Touch</h1>
         <p class="lead text-muted">
           We'd love to hear from you. Please fill out the form below.
         </p>
@@ -17,10 +17,10 @@ block content %}
         <div class="col-lg-5 mb-4 mb-lg-0">
           <div class="card h-100 border-0 shadow-sm">
             <div class="card-body p-4 p-md-5">
-              <h3 class="fw-bold text-indigo mb-4">Contact Details</h3>
+              <h3 class="fw-bold text-theme-primary mb-4">Contact Details</h3>
 
               <div class="d-flex mb-3">
-                <i class="bi bi-geo-alt-fill fs-4 text-indigo me-3"></i>
+                <i class="bi bi-geo-alt-fill fs-4 text-theme-primary me-3"></i>
                 <div>
                   <h5 class="fw-semibold mb-0">Address</h5>
                   <p class="text-muted mb-0">
@@ -32,7 +32,9 @@ block content %}
               <hr />
 
               <div class="d-flex mb-3">
-                <i class="bi bi-telephone-fill fs-4 text-indigo me-3"></i>
+                <i
+                  class="bi bi-telephone-fill fs-4 text-theme-primary me-3"
+                ></i>
                 <div>
                   <h5 class="fw-semibold mb-0">Phone</h5>
                   <p class="text-muted mb-0">(123) 456-7890</p>
@@ -42,7 +44,7 @@ block content %}
               <hr />
 
               <div class="d-flex">
-                <i class="bi bi-envelope-fill fs-4 text-indigo me-3"></i>
+                <i class="bi bi-envelope-fill fs-4 text-theme-primary me-3"></i>
                 <div>
                   <h5 class="fw-semibold mb-0">Email</h5>
                   <p class="text-muted mb-0">info@keshavsoft.com</p>
@@ -56,11 +58,8 @@ block content %}
         <div class="col-lg-7">
           <div class="card border-0 shadow-sm">
             <div class="card-body p-4 p-md-5">
-              <h3 class="fw-bold text-indigo mb-4">Send Us a Message</h3>
+              <h3 class="fw-bold text-theme-primary mb-4">Send Us a Message</h3>
 
-              <!-- 
-                FIX: Removed invalid comment from inside the <form> tag
-              -->
               <form
                 name="contact"
                 method="POST"
@@ -102,7 +101,10 @@ block content %}
                   ></textarea>
                 </div>
                 <div class="col-12">
-                  <button type="submit" class="btn btn-indigo btn-lg w-100">
+                  <button
+                    type="submit"
+                    class="btn btn-theme-primary btn-lg w-100"
+                  >
                     Send Message
                   </button>
                 </div>
