@@ -59,15 +59,20 @@ block content %}
               <h3 class="fw-bold text-indigo mb-4">Send Us a Message</h3>
 
               <!-- 
-                FIX: Removed the bad comment from inside the <form> tag
+                FIX: Changed action="/thank-you/" to action="/thank-you.html"
               -->
               <form
                 name="contact"
                 method="POST"
                 data-netlify="true"
-                action="/thank-you/"
-                class="row g-3"
+                action="/thank-you.html"
+                <!--
+                CHANGED
+                THIS
+                LINE
+                --
               >
+                class="row g-3" >
                 <!-- This hidden field is required for Netlify to identify the form -->
                 <input type="hidden" name="form-name" value="contact" />
 
